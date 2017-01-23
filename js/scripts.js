@@ -1,17 +1,6 @@
-var array= [];
 function makeList(myList, myDeadLine) {
     this.someList = myList;
     this.someDeadLine = myDeadLine;
-    array.push(myList);
-    alert(array.join(","));
-}
-
-function removeItem(array)
-{
-  var updateArray = myArray;
-    for (var i = 0; i < array.length; i++) {
-    updateArray[i]
-  }
 }
 
 makeList.prototype.taskName = function() {
@@ -19,19 +8,26 @@ makeList.prototype.taskName = function() {
 }
 
 
+function initializeArray(newMakeList){
+  var returnMyArray = [];
+  for(var i = 0; i < newMakeLIst.length; i++){
+    returnMyArray.push(returnMyArray[i]);
+  }
+  return (returnMyArray);
+}
+
+
 $(document).ready(function(){
   $("form#taskForm").submit(function(event){
     event.preventDefault();
-
     var inputTask = $("input#taskLabel").val();
     var inputDeadLine = $("input#taskDeadLine").val();
+
     var newMakeList = new makeList(inputTask, inputDeadLine);
 
-
-    $("ul#tasks").append("<li><span class ='toDoList'>" + newMakeList.taskName() + "</span></li>");
+    $("ul#tasks").append("<li><span class ='toDoList'>" + newMakeList.someList + "</span></li>");
     $("input#taskLabel").val("");
     $("input#taskDeadLine").val("");
-
 
     $(".toDoList").last().click(function(){
       $("#displayBox").show();
