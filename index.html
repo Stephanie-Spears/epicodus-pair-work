@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>TO-DO</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>To Do List</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h2>Add a new task:</h2>
+          <form id="taskForm">
+            <div class="form-group">
+              <label for="taskLabel">Task:</label>
+              <input id="taskLabel" type="text">
+            </div> <!-- NOTE: end form-group 1 -->
+            <div class="form-group">
+              <label for="taskDeadLine">Deadline:</label>
+              <input id="taskDeadLine" type="text">
+            </div><!-- NOTE: end form-group -->
+            <button type="submit" class="btn">Add To List</button>
+          </form><!-- NOTE: end form -->
+          <h2>Tasks:</h2>
+          <ul id="tasks">
+          </ul>
+        </div><!-- NOTE: end colOne -->
+        <div class="col-sm-6">
+          <div id="displayBox">
+            <h2></h2>
+            <p>Task Name: <span class="task-name"></span></p>
+            <p>Deadline: <span class="task-deadline"></span></p>
+          </div> <!-- NOTE: end displayBox -->
+        </div> <!-- NOTE: end col -->
+      </div> <!-- NOTE: end row -->
+    </div> <!-- NOTE: end container -->
+  </body>
+</html>

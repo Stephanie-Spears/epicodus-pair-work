@@ -1,0 +1,21 @@
+#sectionDisplay {
+  color: aqua;
+}
+
+#sectionBox {
+  height: 200px;
+  font-size: 2em;
+}
+
+#displayBox {
+  display: none;
+}
+
+.toDoList {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.toDoList:hover {
+  text-decoration: underline;
+}
